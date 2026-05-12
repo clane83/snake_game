@@ -23,7 +23,10 @@ class Score(Turtle):
 
     def update_scoreboard(self):
         self.clear()
-        self.write(f"Score: {self.score} High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
+        self.goto(0, 280)
+        self.write(f"Score: {self.score} High Score: {self.high_score}",
+               align=ALIGNMENT,
+               font=FONT)
 
     def increase_score(self):
         self.score += 1
@@ -38,6 +41,6 @@ class Score(Turtle):
         self.update_scoreboard()
 
 
-    # def game_over(self):
-    #     self.goto(0, 0)
-    #     self.write(f"GAME OVER", align=ALIGNMENT, font=FONT)
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(f"GAME OVER\nPress R to Restart", align=ALIGNMENT, font=FONT)
